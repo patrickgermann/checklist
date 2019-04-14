@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZp-KL-H0m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZp-KL-H0m">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,25 +17,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" id="pdk-FG-p9J">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="pdk-FG-p9J">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pdk-FG-p9J" id="rEB-TY-LgO">
-                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="307" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eG-Zo-YsH">
-                                            <rect key="frame" x="20" y="11" width="295" height="21"/>
+                                            <rect key="frame" x="43" y="11" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD9-kj-Pfv">
+                                            <rect key="frame" x="16" y="8" width="15" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="4eG-Zo-YsH" secondAttribute="bottom" priority="750" constant="11.5" id="CUT-4E-Kpb"/>
-                                        <constraint firstAttribute="trailing" secondItem="4eG-Zo-YsH" secondAttribute="trailing" constant="20" symbolic="YES" id="H38-3G-JYW"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4eG-Zo-YsH" secondAttribute="trailing" symbolic="YES" id="H38-3G-JYW"/>
+                                        <constraint firstItem="4eG-Zo-YsH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YD9-kj-Pfv" secondAttribute="trailing" constant="8" symbolic="YES" id="NU8-nF-pNZ"/>
+                                        <constraint firstItem="YD9-kj-Pfv" firstAttribute="firstBaseline" secondItem="4eG-Zo-YsH" secondAttribute="firstBaseline" id="Prf-k5-mtf"/>
                                         <constraint firstItem="4eG-Zo-YsH" firstAttribute="top" secondItem="rEB-TY-LgO" secondAttribute="top" priority="750" constant="11" id="Xaq-gU-rhJ"/>
-                                        <constraint firstItem="4eG-Zo-YsH" firstAttribute="leading" secondItem="rEB-TY-LgO" secondAttribute="leading" constant="20" symbolic="YES" id="dVp-pY-JeW"/>
+                                        <constraint firstItem="YD9-kj-Pfv" firstAttribute="leading" secondItem="rEB-TY-LgO" secondAttribute="leadingMargin" id="ZPQ-Ji-UAX"/>
+                                        <constraint firstItem="4eG-Zo-YsH" firstAttribute="leading" secondItem="rEB-TY-LgO" secondAttribute="leading" constant="43" id="dVp-pY-JeW"/>
+                                        <constraint firstItem="YD9-kj-Pfv" firstAttribute="top" secondItem="rEB-TY-LgO" secondAttribute="topMargin" constant="-3" id="q80-Ub-FFr"/>
+                                        <constraint firstItem="YD9-kj-Pfv" firstAttribute="bottom" secondItem="4eG-Zo-YsH" secondAttribute="bottom" id="v4G-Jn-PUB"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
